@@ -1,5 +1,5 @@
 ---
-title: "blog_post_black_box_models"
+title: "Considerations When Using Machine Learning Models to make High-Stakes Decisions"
 author: "Daniel Yorke"
 date: 2026-01-13
 listing:
