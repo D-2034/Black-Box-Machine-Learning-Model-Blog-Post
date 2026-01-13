@@ -15,4 +15,4 @@ about:
 
 ---
 
-About this blog
+This is where Daniel Yorke posts his blogs and opinions. 
