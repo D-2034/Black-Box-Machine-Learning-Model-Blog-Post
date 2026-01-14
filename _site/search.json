@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome!",
+    "section": "",
+    "text": "Understanding the Risks of Black-Box Machine Learning Models and the Movement to Explain Them\n\n\n\nMachine Learning\n\nExplainable\n\nDecision-Making\n\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nDaniel Yorke\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Understanding the Risks of Black-Box Machine Learning Models and the Movement to Explain Them",
+    "section": "",
+    "text": "Dangerous criminals being let out of prison, discriminatory bank loan practices, and incorrect health advisories for air quality. What do all of these erroneous decisions have in common? They were the result of using complex machine learning models (called “black-box models”) to make high-stakes decisions. When asked about why these decisions were made, decision-makers had to consult their data science team to understand what happened. The data science team, in turn, could not easily explain why their model made a specific prediction. Obviously, this is a significant problem which poses ethical and practical questions for decision-makers in high-stakes contexts. This blog post aims to address this problem and provide some suggestions based on an article 1 written by Cynthia Rudin of Duke University. A bit of background and terminology for our non-technical readers: In data science, a key concept is machine learning. Essentially, machine learning is the technique of building and training a mathematical model to make predictions. These predictions can be numerical (such as predicting house prices) or categorical (such as predicting whether high school students will be high performing in post-secondary education). There are both simple and complex machine learning models. A model is considered simple when the mathematics behind it are straightforward, making it easy to understand how the model calculates a prediction. A complex model, on the other hand, relies on mathematics that are difficult to interpret, making it hard to understand how a specific prediction is produced. A very complex model, for example, could be composed of multiple models combined together. Sometimes, machine learning models are so complex that they are referred to as “black box” models. This term comes from the idea of a machine in which inputs go into a box that cannot be seen into, transformations occur inside, and an output is produced. While we can observe the inputs and outputs, we cannot see or easily understand the transformations that occur inside the box.\n\nBecause we cannot understand how black box machine learning models produce their predictions, some data scientists have proposed attempting to explain model predictions after they are made, a process known as post-hoc explanation. These data scientists argue that complex models can still be interpretable and that such complexity is often necessary to achieve high predictive accuracy. Further, this movement often called “Explainable ML” argue that these complex models can be consistently interpreted and understood. They claim that complex models can be safely used in high-stakes decision-making contexts such as criminal justice or healthcare. However, for a number of reasons detailed below, there are significant flaws with this line of thinking."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#background",
+    "href": "posts/post-with-code/index.html#background",
+    "title": "Understanding the Risks of Black-Box Machine Learning Models and the Movement to Explain Them",
+    "section": "",
+    "text": "Dangerous criminals being let out of prison, discriminatory bank loan practices, and incorrect health advisories for air quality. What do all of these erroneous decisions have in common? They were the result of using complex machine learning models (called “black-box models”) to make high-stakes decisions. When asked about why these decisions were made, decision-makers had to consult their data science team to understand what happened. The data science team, in turn, could not easily explain why their model made a specific prediction. Obviously, this is a significant problem which poses ethical and practical questions for decision-makers in high-stakes contexts. This blog post aims to address this problem and provide some suggestions based on an article 1 written by Cynthia Rudin of Duke University. A bit of background and terminology for our non-technical readers: In data science, a key concept is machine learning. Essentially, machine learning is the technique of building and training a mathematical model to make predictions. These predictions can be numerical (such as predicting house prices) or categorical (such as predicting whether high school students will be high performing in post-secondary education). There are both simple and complex machine learning models. A model is considered simple when the mathematics behind it are straightforward, making it easy to understand how the model calculates a prediction. A complex model, on the other hand, relies on mathematics that are difficult to interpret, making it hard to understand how a specific prediction is produced. A very complex model, for example, could be composed of multiple models combined together. Sometimes, machine learning models are so complex that they are referred to as “black box” models. This term comes from the idea of a machine in which inputs go into a box that cannot be seen into, transformations occur inside, and an output is produced. While we can observe the inputs and outputs, we cannot see or easily understand the transformations that occur inside the box.\n\nBecause we cannot understand how black box machine learning models produce their predictions, some data scientists have proposed attempting to explain model predictions after they are made, a process known as post-hoc explanation. These data scientists argue that complex models can still be interpretable and that such complexity is often necessary to achieve high predictive accuracy. Further, this movement often called “Explainable ML” argue that these complex models can be consistently interpreted and understood. They claim that complex models can be safely used in high-stakes decision-making contexts such as criminal justice or healthcare. However, for a number of reasons detailed below, there are significant flaws with this line of thinking."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#what-are-the-problems-with-this-view",
+    "href": "posts/post-with-code/index.html#what-are-the-problems-with-this-view",
+    "title": "Understanding the Risks of Black-Box Machine Learning Models and the Movement to Explain Them",
+    "section": "What are the Problems with this View?",
+    "text": "What are the Problems with this View?\nSome data scientists argue that attempting to explain black box machine learning models is flawed from the outset for a few reasons. First, because these models are designed to predict, not to be interpreted. Often these models are so complex (e.g., meta-models, neural networks) that each prediction is only computer-interpretable and not human-interpretable. There can also be statistical issues with interpreting model output inferentially. Second, what often happens is that data scientists will make a second model of interpretation to interpret the first model. So, they would try to determine the pathway made by the model to arrive at the final decision. However, in practice this second model is often incorrect and unreliable 1.\nOne article 1, written by Cynthia Rudin of Duke University, strongly disputes with the “Explainable ML” data scientists. Rudin presents evidence showing that complex models are not necessarily more accurate than simpler alternatives. This is a common misconception in data science where a more complicated model must be better at predicting outcomes, but this is not the case. Rudin argues that instead of using a second model to explain the first, simpler models should be used so that interpretability is built directly into the model itself. Many simpler models like Linear or Logistic Regression have innately interpretable systems which are easier to explain.\nFundamentally, Rudin contends that using transparent, interpretable models can help avoid harmful errors in high-stakes decision-making contexts such as criminal justice and healthcare. The author also highlights examples in which individuals were denied parole, poor bail decisions led to the release of dangerous criminals, and air quality predictions were misclassified as “good” instead of “poor.” These cases illustrate the risks of using black box models in high-stakes situations. She further argues that post-hoc explanations are often low-fidelity, meaning they can be unreliable and misleading when compared to the model’s true decision-making process. These interpretations are often unreliable as well, because they highlight trends or summarize the content rather than explain actually how the model arrived at the decision."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#conclusion",
+    "href": "posts/post-with-code/index.html#conclusion",
+    "title": "Understanding the Risks of Black-Box Machine Learning Models and the Movement to Explain Them",
+    "section": "Conclusion",
+    "text": "Conclusion\nIt appears that using black-box machine learning models are ill-advised in high-stakes decision-making; instead, using simple and naturally interpretable models may provide a more transparent way to understand decisions made by models. Additionally, the argument could be made that for decisions with high human impact (e.g., criminal justice, public health advisories, loan-approvals) should not be made solely by machine learning models. Because models cannot make moral, ethical decisions the burden of evidence for the decision must lie with the decision-maker. Thus, if a machine learning model is used by a decision-maker to inform a decision, they (or their data science team) better be able to articulate how the model came to a decision and critically evaluate whether the decision makes sense. Speaking more broadly, the responsibility of a decision must be placed on decision-makers and black-box models cannot be used as scapegoats when a decision leads to disaster."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#references",
+    "href": "posts/post-with-code/index.html#references",
+    "title": "Understanding the Risks of Black-Box Machine Learning Models and the Movement to Explain Them",
+    "section": "References",
+    "text": "References\n[1]. Rudin, C. (2019). Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nature Machine Intelligence, 1(5), 206–215. https://doi.org/10.1038/s42256-019-0048-x"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is where Daniel Yorke posts his blogs and opinions."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  }
+]
